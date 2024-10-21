@@ -6,7 +6,15 @@
             posthog.init('phc_TCiDGoDxUFR7Zwrq8dmuqSguSg76vD09t71EpujP8YR',{api_host:'https://us.i.posthog.com', person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
                 })
 
-            posthog.capture('localTimeTest', { 'local_time': new Date().toLocaleString() })
+            function captureLocalTimeEvent() {
+                console.log("Button clicked!")
+                posthog.capture('localTimeTest', { 
+                    'local_time': new Date().toLocaleString() 
+                });
+            }
+
+            document.getElementById("postHogButton").addEventListener("click", captureLocalTimeEvent);
+
         </script>
     </head>
 <body>
