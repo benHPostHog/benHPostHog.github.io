@@ -8,8 +8,10 @@
 
             function captureLocalTimeEvent() {
                 console.log("Button clicked!")
+                var localTimeString = new Date().toLocaleString();
+                localTimeAsDate = new Date(localTimeString);
                 posthog.capture('localTimeTest', { 
-                    'local_time': new Date().toLocaleString() 
+                    'local_time_asdate': localTimeAsDate
                 });
             }
 
