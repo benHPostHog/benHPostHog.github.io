@@ -10,6 +10,7 @@
                 console.log("Button clicked!")
                 var localTimeString = new Date().toLocaleString();
                 localTimeAsDate = new Date(localTimeString);
+                console.log(localTimeAsDate);
                 posthog.capture('localTimeTest', { 
                     'local_time_asdate': localTimeAsDate
                 });
