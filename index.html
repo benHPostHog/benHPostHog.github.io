@@ -19,10 +19,15 @@
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.<br>I exist only capture some PostHog events</p>
 <div>
-    <button id="postHogButton" type="button">Click Me!</button>
+    <button id="postHogButton1" type="button">Button 1</button>
+    <button id="postHogButton2" type="button">Button 2</button>
+    <button id="postHogButton3" type="button">Button 3</button>
 </div>
 </body>
 <script>
-    document.getElementById("postHogButton").addEventListener("click", captureLocalTimeEvent);
+    document.getElementById("postHogButton1").addEventListener("click", captureLocalTimeEvent);
+    document.getElementById("postHogButton2").addEventListener("click", captureLocalTimeEvent);
+    document.getElementById("postHogButton3").addEventListener("click", captureLocalTimeEvent);
+
 </script>
 </html>
