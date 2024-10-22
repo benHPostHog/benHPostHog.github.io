@@ -31,6 +31,11 @@
     document.getElementById("postHogButton1").addEventListener("click", captureLocalTimeEvent);
     document.getElementById("postHogButton2").addEventListener("click", captureLocalTimeEvent);
     document.getElementById("postHogButton3").addEventListener("click", captureLocalTimeEvent);
+    posthog.capture('$pageview', {
+    author: "Ben Haynes",
+    is_free_trial: true
+})
+
 
 </script>
 </html>
