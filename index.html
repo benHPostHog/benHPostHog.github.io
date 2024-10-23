@@ -26,13 +26,24 @@
     <button id="postHogButton2" type="button">Button 2</button>
     <button id="postHogButton3" type="button">Button 3</button>
 </div>
+
+<div id="authorName">Foo</div>
 </body>
 <script>
     document.getElementById("postHogButton1").addEventListener("click", captureLocalTimeEvent);
     document.getElementById("postHogButton2").addEventListener("click", captureLocalTimeEvent);
     document.getElementById("postHogButton3").addEventListener("click", captureLocalTimeEvent);
+
+    function getAuthorName() {
+        const authorElement = document.getElementById('authorName');
+        if (authorElement) {
+            return authorElement.textContent || authorElement.innerText;
+        }
+        return null; // In case the element is not found
+    }
+
     posthog.capture('$pageview', {
-    author: "Ben Haynes",
+    author: getAuthorName(),
     is_free_trial: true
 })
 
