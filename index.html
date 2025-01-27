@@ -11,7 +11,7 @@
                 var localTimeString = new Date().toLocaleString();
                 localTimeAsDate = new Date(localTimeString);
                 console.log(localTimeAsDate);
-                posthog.get_distinct_id();
+                console.log(posthog.get_distinct_id());
                 posthog.capture('localTimeTest', { 
                     'local_time_asdate': localTimeAsDate
                 });
