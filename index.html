@@ -6,7 +6,7 @@
             posthog.init('phc_TCiDGoDxUFR7Zwrq8dmuqSguSg76vD09t71EpujP8YR',{api_host:'https://us.i.posthog.com', person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well, pa
                 })
 
-                posthog.set_config({ capture_pageview: false, capture_pageleave: true })
+                posthog.set_config({ capture_pageview: false })
 
             function captureLocalTimeEvent() {
                 console.log("Button clicked!")
