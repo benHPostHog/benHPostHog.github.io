@@ -26,6 +26,7 @@
     <button id="postHogButton1" type="button">Button 1</button>
     <button id="postHogButton2" type="button">Button 2</button>
     <button id="postHogButton3" type="button">Button 3</button>
+    <button id="postHogButton4" type="button">Call reset</button>
 </div>
 
 <div id="authorName">Foo</div>
@@ -35,6 +36,7 @@
     document.getElementById("postHogButton1").addEventListener("click", captureLocalTimeEvent);
     document.getElementById("postHogButton2").addEventListener("click", captureLocalTimeEvent);
     document.getElementById("postHogButton3").addEventListener("click", captureLocalTimeEvent);
+    document.getElementById("postHogButton4").addEventListener("click", posthog.reset());
 
     function getAuthorName() {
         const authorElement = document.getElementById('authorName');
