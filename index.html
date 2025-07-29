@@ -17,6 +17,18 @@
                 });
             }
 
+            function resetCall() {
+                console.log("Button clicked!")
+                console.log("Resetting!");
+                posthog.reset();
+            }
+
+            function identifyCall() {
+                console.log("Button clicked!")
+                console.log("Identifying!");
+                posthog.identify();
+            }
+
         </script>
     </head>
 <body>
@@ -37,8 +49,8 @@
     document.getElementById("postHogButton1").addEventListener("click", captureLocalTimeEvent);
     document.getElementById("postHogButton2").addEventListener("click", captureLocalTimeEvent);
     document.getElementById("postHogButton3").addEventListener("click", captureLocalTimeEvent);
-    document.getElementById("postHogButton4").addEventListener("click", posthog.reset());
-    document.getElementById("postHogButton5").addEventListener("click", posthog.identify());
+    document.getElementById("postHogButton4").addEventListener("click", resetCall);
+    document.getElementById("postHogButton5").addEventListener("click", identifyCall);
 
     function getAuthorName() {
         const authorElement = document.getElementById('authorName');
