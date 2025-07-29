@@ -26,7 +26,10 @@
             function identifyCall() {
                 console.log("Button clicked!")
                 console.log("Identifying!");
-                posthog.identify();
+                const randomId = crypto.randomUUID(); // Supported in most modern browsers
+
+                // Identify the user with the random ID
+                posthog.identify(randomId);
             }
 
         </script>
